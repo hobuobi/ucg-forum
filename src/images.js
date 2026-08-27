@@ -1,0 +1,38 @@
+/* ------------------------------------------------------------------ *
+ * Static photo references.
+ *
+ * Files live in /public/images and are served from the site root, so
+ * these paths work in dev, in `vite preview`, and in production.
+ *
+ * To use real photography, drop a file with the same name into
+ * /public/images (any web format — .jpg, .webp, .png) and update the
+ * extension here. Nothing else in the app needs to change.
+ * ------------------------------------------------------------------ */
+
+const base = "/images";
+
+export const IMAGES = {
+  favicon: `${base}/favicon.svg`,
+
+  // Hero — portrait orientation, shown at ~74vh tall on the right of the hero.
+  hero: {
+    src: `${base}/hero.svg`,
+    alt: "Utahns of different ages and backgrounds in conversation around a table",
+  },
+
+  // Process accordion — one 16:9 image per step, keyed by step id.
+  process: {
+    "steering-committee": {
+      src: `${base}/process-steering-committee.svg`,
+      alt: "Members of a bipartisan steering committee reviewing ground rules together",
+    },
+    "set-agenda": {
+      src: `${base}/process-set-agenda.svg`,
+      alt: "Residents responding to surveys and talking in a community conversation",
+    },
+    "assembly": {
+      src: `${base}/process-assembly.svg`,
+      alt: "Delegates seated in small groups drafting recommendations",
+    },
+  },
+};

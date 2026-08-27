@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Photo placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(10 .5 .5)">
+      <stop offset="0" stop-color="#EBD8C2"/>
+      <stop offset="1" stop-color="#D8BA9C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#g)"/>
+  <g fill="#3B1E12" fill-opacity="0.12">
+    <circle cx="360" cy="300" r="82"/>
+    <path d="M225 720c0-124 60-210 135-210s135 86 135 210z"/>
+    <circle cx="640" cy="270" r="82"/>
+    <path d="M505 720c0-124 60-210 135-210s135 86 135 210z"/>
+    <circle cx="920" cy="300" r="82"/>
+    <path d="M785 720c0-124 60-210 135-210s135 86 135 210z"/>
+  </g>
+  <text x="44" y="676" font-family="Figtree, system-ui, sans-serif" font-size="26" font-weight="700" letter-spacing="4" fill="#3B1E12" fill-opacity="0.42">PHOTO PLACEHOLDER</text>
+</svg>
