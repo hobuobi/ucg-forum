@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap');
 
 html, body { margin: 0; padding: 0; }
+/* Clip sideways bleed (ambient rings) at the document root. Keeping this on
+   <html> means the page keeps ONE scroll container — the viewport. */
+html { overflow-x: hidden; }
 #root { isolation: isolate; }
 
 .ucg {
@@ -19,7 +22,11 @@ html, body { margin: 0; padding: 0; }
   background: var(--cream);
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  /* `clip`, not `hidden`: `overflow-x: hidden` on a nested element forces
+     `overflow-y` to `auto`, turning .ucg into a second scroll container
+     inside the page and making the wheel stutter / fight itself. `clip`
+     hides the horizontal bleed without establishing a scroll container. */
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 .ucg *, .ucg *::before, .ucg *::after { box-sizing: border-box; }

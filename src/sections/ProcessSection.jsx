@@ -57,6 +57,8 @@ export default function ProcessSection() {
   const [progress, setProgress] = useState(0);
   const [paused, setPaused] = useState(false);
   const [stopped, setStopped] = useState(false);
+  const [inView, setInView] = useState(true);
+  const sectionRef = useRef(null);
   const progressRef = useRef(0);
   const touchX = useRef(null);
 
@@ -64,7 +66,19 @@ export default function ProcessSection() {
     progressRef.current = progress;
   }, [progress]);
 
-  const cycling = !reduced && !paused && !stopped;
+  // Only run the per-frame progress loop while the section is on screen, so
+  // it never competes with the user's scroll elsewhere on the page.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setInView(e.isIntersecting), {
+      rootMargin: "0px 0px -20% 0px",
+    });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  const cycling = !reduced && !paused && !stopped && inView;
 
   useEffect(() => {
     if (!cycling) return;
@@ -106,7 +120,7 @@ export default function ProcessSection() {
   };
 
   return (
-    <section className="ucg-section" id="process">
+    <section className="ucg-section" id="process" ref={sectionRef}>
       <Rings
         style={{ top: "50%", left: -430, transform: "translateY(-50%)" }}
         radii={[180, 250, 320, 390, 460]}
