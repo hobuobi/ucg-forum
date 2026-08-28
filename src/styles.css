@@ -44,7 +44,19 @@ html { overflow-x: hidden; }
   position: fixed; top: 6px; left: 0; right: 0; z-index: 55;
   display: flex; justify-content: flex-end; align-items: center; gap: 44px;
   padding: 26px 56px;
-  transition: color 240ms ease;
+  background: rgba(253, 241, 227, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(59, 30, 18, 0.08);
+  transition: color 240ms ease, background 240ms ease, border-color 240ms ease;
+}
+/* no backdrop-filter support: lean on a more opaque tint so text stays legible */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .ucg-nav { background: rgba(253, 241, 227, 0.94); }
+}
+.ucg-nav.is-invert {
+  background: rgba(238, 123, 60, 0.68);
+  border-bottom-color: rgba(255, 255, 255, 0.18);
 }
 .ucg-nav a { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: var(--olive); padding: 4px 0; }
 .ucg-nav a:hover { color: var(--orange); }
