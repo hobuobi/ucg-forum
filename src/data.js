@@ -18,13 +18,18 @@ export const NAV = [
   { label: "Delegate Portal", kind: "route", target: "delegates" },
 ];
 
+/**
+ * Hero marquee supporters. `logo` is optional — when a matching file exists
+ * in /public/images/logos it renders as an image, otherwise `name` shows as
+ * text (\n becomes a line break).
+ */
 export const SUPPORTERS = [
-  "UTAH COMMON\nGROUND",
-  "BLOOM\nPROJECT",
-  "AEGIX",
-  "KEM C. GARDNER\nINSTITUTE",
-  "BRAVER\nANGELS",
-  "MWEG",
+  { name: "UTAH COMMON\nGROUND", logo: IMAGES.logos["utah-common-ground"] },
+  { name: "BLOOM\nPROJECT" },
+  { name: "AEGIX", logo: IMAGES.logos.aegix },
+  { name: "KEM C. GARDNER\nINSTITUTE", logo: IMAGES.logos["kem-c-gardner"] },
+  { name: "BRAVER\nANGELS", logo: IMAGES.logos["braver-angels"] },
+  { name: "MWEG", logo: IMAGES.logos.mweg },
 ];
 
 export const STEPS = [

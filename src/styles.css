@@ -174,6 +174,14 @@ html { overflow-x: hidden; }
   font-size: 15px; font-weight: 800; letter-spacing: 0.02em; line-height: 1.1;
   text-align: center; color: var(--brown); opacity: 0.62; white-space: pre-line;
 }
+/* logo images: desaturated, and the parent's 0.62 opacity keeps them faint */
+.ucg-logo img {
+  height: 42px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  filter: grayscale(1);
+}
 @keyframes ucg-slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* ---------- process accordion ---------- */

@@ -20,6 +20,16 @@ export const IMAGES = {
     alt: "Utahns of different ages and backgrounds in conversation around a table",
   },
 
+  // Supporter logos for the hero marquee. Files live in /public/images/logos.
+  // A supporter with no entry here falls back to its name as text.
+  logos: {
+    "utah-common-ground": `${base}/logos/ucg.avif`,
+    aegix: `${base}/logos/aegix.png`,
+    "kem-c-gardner": `${base}/logos/gardner.png`,
+    "braver-angels": `${base}/logos/braverangels.webp`,
+    mweg: `${base}/logos/mweg.png`,
+  },
+
   // Process accordion — one 16:9 image per step, keyed by step id.
   process: {
     "steering-committee": {

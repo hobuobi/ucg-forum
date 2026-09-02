@@ -21,11 +21,19 @@ export default function Hero() {
               <p className="ucg-eyebrow">Supported by</p>
               <div className="ucg-marquee">
                 <div className="ucg-marquee-track">
-                  {[...SUPPORTERS, ...SUPPORTERS].map((name, i) => (
-                    <div className="ucg-logo" key={i} aria-hidden={i >= SUPPORTERS.length}>
-                      {name}
-                    </div>
-                  ))}
+                  {[...SUPPORTERS, ...SUPPORTERS].map((s, i) => {
+                    const dupe = i >= SUPPORTERS.length;
+                    const label = s.name.replace(/\n/g, " ");
+                    return (
+                      <div className="ucg-logo" key={i} aria-hidden={dupe}>
+                        {s.logo ? (
+                          <img src={s.logo} alt={dupe ? "" : label} loading="lazy" />
+                        ) : (
+                          s.name
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
