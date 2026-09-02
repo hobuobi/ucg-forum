@@ -77,15 +77,56 @@ export const RACES = [
 ];
 export const AGES = ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"];
 
-export const SOURCES = [
-  { tag: "Primer", title: "What is generative AI, in plain terms", meta: "Prepared for delegates · 6 pages" },
-  { tag: "Briefing", title: "AI data centers and Utah's water and power", meta: "Utah Common Ground · 9 pages" },
-  { tag: "Report", title: "Where 500 Utahns agreed, and where they split", meta: "Community conversation findings" },
-  { tag: "Explainer", title: "Who regulates AI today: state, federal, private", meta: "Prepared for delegates · 5 pages" },
-  { tag: "Perspectives", title: "Four arguments about public oversight of AI", meta: "Balanced review · 12 pages" },
-  { tag: "Case study", title: "How other states have consulted residents", meta: "Comparative summary · 8 pages" },
-  { tag: "Glossary", title: "Terms you'll hear at the Forum", meta: "Reference · 3 pages" },
-  { tag: "Video", title: "Steering Committee on why this question", meta: "14 minutes" },
+/**
+ * Learning-materials cards. Every card is just: title, url (or file), and the
+ * author/source it came from (rendered as "From <source>").
+ */
+export const ACCESS_MATERIALS = [
+  {
+    title: "Official Briefing Book",
+    source: "Utah Common Ground",
+    file: "/docs/SolutionsForumBriefingBooklet.pdf",
+    download: "Solutions Forum Briefing Booklet.pdf",
+    kind: "PDF",
+  },
+  {
+    title: "Briefing Video",
+    source: "Utah Common Ground",
+    url: "#",
+  },
+];
+
+export const RESOURCES = [
+  {
+    title: "What is generative AI, in plain terms",
+    source: "MIT Technology Review",
+    url: "#",
+  },
+  {
+    title: "AI data centers and Utah’s water and power",
+    source: "The Salt Lake Tribune",
+    url: "#",
+  },
+  {
+    title: "Where 500 Utahns agreed, and where they split",
+    source: "Utah Common Ground",
+    url: "#",
+  },
+  {
+    title: "Who regulates AI today: state, federal, and private",
+    source: "Utah Office of Artificial Intelligence Policy",
+    url: "#",
+  },
+  {
+    title: "How other places have consulted their residents",
+    source: "Participedia",
+    url: "#",
+  },
+  {
+    title: "Four perspectives on public oversight of AI",
+    source: "Brookings Institution",
+    url: "#",
+  },
 ];
 
 export const PORTAL_CODE = "utah2026";
