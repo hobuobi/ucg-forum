@@ -66,11 +66,13 @@ export default function ForumSection() {
                     className={`ucg-tip${low ? " ucg-tip-lo" : ""}`}
                     style={{ left: `${(n.cx / 200) * 100}%`, top: `${(n.cy / 200) * 100}%` }}
                   >
-                    {n.county} County · Age {n.age}
+                    {n.county} County
                     <br />
                     {n.perspective}
                     <br />
                     {n.race}
+                    <br />
+                    Age {n.age}
                   </div>
                 );
               })}
