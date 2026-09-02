@@ -24,6 +24,7 @@ export const IMAGES = {
   // A supporter with no entry here falls back to its name as text.
   logos: {
     "utah-common-ground": `${base}/logos/ucg.avif`,
+    "bloom-project": `${base}/logos/bloom.png`,
     aegix: `${base}/logos/aegix.png`,
     "kem-c-gardner": `${base}/logos/gardner.png`,
     "braver-angels": `${base}/logos/braverangels.webp`,
