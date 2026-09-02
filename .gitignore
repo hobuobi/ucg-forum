@@ -5,3 +5,6 @@ dist-ssr
 .DS_Store
 .vercel
 npm-debug.log*
+
+# local design source files (originals); optimized copies live in public/
+design-assets/

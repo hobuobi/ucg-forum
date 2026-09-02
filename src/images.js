@@ -14,9 +14,10 @@ const base = "/images";
 export const IMAGES = {
   favicon: `${base}/favicon.svg`,
 
-  // Hero — portrait orientation, shown at ~74vh tall on the right of the hero.
+  // Hero — a cut-out photo (transparent background) that sits large on the
+  // right of the hero, vertically centred and bleeding past the right edge.
   hero: {
-    src: `${base}/hero.svg`,
+    src: `${base}/table-convo.webp`,
     alt: "Utahns of different ages and backgrounds in conversation around a table",
   },
 
