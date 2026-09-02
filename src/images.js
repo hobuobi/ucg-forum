@@ -32,19 +32,20 @@ export const IMAGES = {
     mweg: `${base}/logos/mweg.png`,
   },
 
-  // Process accordion — one 16:9 image per step, keyed by step id.
+  // "The Process" accordion — one 16:9 image per step, keyed by step id.
+  // A step with no entry here renders without an image.
   process: {
-    "steering-committee": {
-      src: `${base}/process-steering-committee.svg`,
-      alt: "Members of a bipartisan steering committee reviewing ground rules together",
+    "open-poll": {
+      src: `${base}/openPoll.webp`,
+      alt: "A stylized online poll interface, responses marked as agree or disagree",
     },
-    "set-agenda": {
-      src: `${base}/process-set-agenda.svg`,
-      alt: "Residents responding to surveys and talking in a community conversation",
+    "cache-county-forum": {
+      src: `${base}/table-convo-2.webp`,
+      alt: "A room of Utah residents in conversation around white round tables",
     },
-    "assembly": {
-      src: `${base}/process-assembly.svg`,
-      alt: "Delegates seated in small groups drafting recommendations",
+    "solutions-forum": {
+      src: `${base}/solutions-forum.webp`,
+      alt: "Illustration of about forty delegates as a rounded crowd of sketched faces",
     },
   },
 };

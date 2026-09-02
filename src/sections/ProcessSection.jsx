@@ -23,9 +23,11 @@ function ProcessCard({ step, open, progress, onClick }) {
         <div>
           <div className="ucg-card-inner">
             <p className="ucg-card-blurb">{step.blurb}</p>
-            <div className="ucg-card-img">
-              <img src={step.image.src} alt={step.image.alt} />
-            </div>
+            {step.image && (
+              <div className="ucg-card-img">
+                <img src={step.image.src} alt={step.image.alt} />
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -37,10 +39,12 @@ function MobileCard({ step }) {
   return (
     <div className="ucg-card is-open">
       <div className="ucg-card-pad">
-        <div className="ucg-card-img" style={{ marginTop: 0 }}>
-          <img src={step.image.src} alt={step.image.alt} />
-        </div>
-        <p className="ucg-card-blurb" style={{ marginTop: 18 }}>
+        {step.image && (
+          <div className="ucg-card-img" style={{ marginTop: 0 }}>
+            <img src={step.image.src} alt={step.image.alt} />
+          </div>
+        )}
+        <p className="ucg-card-blurb" style={{ marginTop: step.image ? 18 : 0 }}>
           {step.blurb}
         </p>
         {/* mobile cards are always expanded, so no reveal wrapper */}

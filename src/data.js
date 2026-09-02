@@ -34,25 +34,32 @@ export const SUPPORTERS = [
 
 export const STEPS = [
   {
-    id: "steering-committee",
-    title: "Assemble a Steering Committee.",
+    id: "open-poll",
+    title: "Open Poll",
     blurb:
-      "Utahns from across the political spectrum set the ground rules and vouch for the process.",
-    image: IMAGES.process["steering-committee"],
+      "Over 500 Utahns shared their perspectives online, identifying areas of interest and consensus across the public.",
+    image: IMAGES.process["open-poll"],
   },
   {
-    id: "set-agenda",
-    title: "Set the agenda.",
+    id: "community-conversations",
+    title: "Community Conversations",
     blurb:
-      "We engaged over 500 Utahns through surveys and community conversations.",
-    image: IMAGES.process["set-agenda"],
+      "We ran over 10 live conversations online and in person to dig into our people’s stories related to this topic.",
+    // image coming later
   },
   {
-    id: "assembly",
-    title: "Organize an assembly of residents.",
+    id: "cache-county-forum",
+    title: "Cache County Forum",
     blurb:
-      "Forty randomly selected delegates meet for two days to write recommendations.",
-    image: IMAGES.process["assembly"],
+      "30 Utahns of different backgrounds came together for a three hour conversation about public participation and AI.",
+    image: IMAGES.process["cache-county-forum"],
+  },
+  {
+    id: "solutions-forum",
+    title: "Solutions Forum",
+    blurb:
+      "Now, 40 randomly-selected residents will learn together and develop policy recommendations.",
+    image: IMAGES.process["solutions-forum"],
   },
 ];
 
