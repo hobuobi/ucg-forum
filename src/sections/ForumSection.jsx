@@ -1,14 +1,14 @@
 import { useMemo, useState } from "react";
 import Rings from "../components/Rings.jsx";
 import Arrow from "../components/Arrow.jsx";
-import { buildDelegates } from "../lib/delegates.js";
+import { layoutDelegates } from "../lib/delegates.js";
 import { useSite } from "../lib/navigation.js";
 
 const SAMPLE_IDS = [7, 18, 31];
 
 export default function ForumSection() {
   const { go } = useSite();
-  const nodes = useMemo(buildDelegates, []);
+  const nodes = useMemo(layoutDelegates, []);
   const [hovered, setHovered] = useState(null);
   const [showSamples, setShowSamples] = useState(true);
 
@@ -42,7 +42,7 @@ export default function ForumSection() {
                     r="10.5"
                     tabIndex={0}
                     role="img"
-                    aria-label={`Delegate: ${n.party}, ${n.race}, age ${n.age}`}
+                    aria-label={`Delegate from ${n.county} County, age ${n.age}, ${n.perspective}, ${n.race}`}
                     onMouseEnter={() => {
                       touch();
                       setHovered(n.id);
@@ -66,11 +66,11 @@ export default function ForumSection() {
                     className={`ucg-tip${low ? " ucg-tip-lo" : ""}`}
                     style={{ left: `${(n.cx / 200) * 100}%`, top: `${(n.cy / 200) * 100}%` }}
                   >
-                    {n.party}
+                    {n.county} County · Age {n.age}
+                    <br />
+                    {n.perspective}
                     <br />
                     {n.race}
-                    <br />
-                    {n.age}
                   </div>
                 );
               })}

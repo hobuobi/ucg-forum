@@ -65,17 +65,54 @@ export const STEPS = [
 
 export const STEP_MS = 5000;
 
-export const PARTIES = ["Democrat", "Republican", "Independent", "Unaffiliated"];
-export const RACES = [
-  "White",
-  "Hispanic or Latino",
-  "Asian",
-  "Native American",
-  "Black",
-  "Two or more races",
-  "Pacific Islander",
+/**
+ * The 40 Solutions Forum delegates, from reference/table.tsv. Order is not
+ * meaningful — the viz lays them out as an organic cluster. Kept to the few
+ * fields the delegate dot-cluster needs; `leaning` is the coarse bucket,
+ * `perspective` is how the delegate described themselves.
+ */
+export const DELEGATES = [
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Right" },
+  { county: "Cache", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "18–29", perspective: "Republican" },
+  { county: "Utah", gender: "male", leaning: "Rep/lean Rep", race: "Hispanic/Latino", age: "18–29", perspective: "Republican" },
+  { county: "Utah", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "55–70", perspective: "Unaffiliated, Lean Left" },
+  { county: "Salt Lake", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "71–84+", perspective: "Republican" },
+  { county: "Salt Lake", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Republican" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "Hispanic/Latino", age: "30–44", perspective: "Unaffiliated, Lean Right" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "18–29", perspective: "Republican" },
+  { county: "Salt Lake", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Unaffiliated, Lean Right" },
+  { county: "Utah", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "45–54", perspective: "Unaffiliated, Lean Left" },
+  { county: "Utah", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "55–70", perspective: "Unaffiliated, Lean Left" },
+  { county: "Salt Lake", gender: "male", leaning: "No lean", race: "Declined to state", age: "55–70", perspective: "Other" },
+  { county: "Salt Lake", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "71–84+", perspective: "Republican" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Right" },
+  { county: "Cache", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "45–54", perspective: "Republican" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "Hispanic/Latino", age: "45–54", perspective: "Unaffiliated, Lean Right" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Republican" },
+  { county: "Utah", gender: "female", leaning: "Rep/lean Rep", race: "Hispanic/Latino", age: "45–54", perspective: "Unaffiliated, Lean Right" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Republican" },
+  { county: "Cache", gender: "female", leaning: "Dem/lean Dem", race: "Hispanic/Latino", age: "18–29", perspective: "Unaffiliated, Lean Left" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "Hispanic/Latino", age: "55–70", perspective: "Republican" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "Asian", age: "18–29", perspective: "Unaffiliated, Lean Right" },
+  { county: "Salt Lake", gender: "male", leaning: "No lean", race: "Asian", age: "45–54", perspective: "Other" },
+  { county: "Utah", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "45–54", perspective: "Unaffiliated, Lean Left" },
+  { county: "Utah", gender: "other", leaning: "Dem/lean Dem", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Left" },
+  { county: "Utah", gender: "declined to state", leaning: "Dem/lean Dem", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Left" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Right" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "Other", age: "55–70", perspective: "Unaffiliated, Lean Right" },
+  { county: "Salt Lake", gender: "male", leaning: "Dem/lean Dem", race: "White", age: "71–84+", perspective: "Unaffiliated, Lean Left" },
+  { county: "Utah", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "45–54", perspective: "Democrat" },
+  { county: "Salt Lake", gender: "male", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Republican" },
+  { county: "Utah", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Republican" },
+  { county: "Salt Lake", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "30–44", perspective: "Democrat" },
+  { county: "Cache", gender: "male", leaning: "Dem/lean Dem", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Left" },
+  { county: "Salt Lake", gender: "female", leaning: "Dem/lean Dem", race: "White", age: "55–70", perspective: "Unaffiliated, Lean Left" },
+  { county: "Cache", gender: "male", leaning: "Dem/lean Dem", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Left" },
+  { county: "Utah", gender: "female", leaning: "Rep/lean Rep", race: "White", age: "30–44", perspective: "Republican" },
+  { county: "Utah", gender: "female", leaning: "Rep/lean Rep", race: "Asian", age: "55–70", perspective: "Republican" },
+  { county: "Utah", gender: "female", leaning: "Dem/lean Dem", race: "Hispanic/Latino", age: "30–44", perspective: "Unaffiliated, Lean Left" },
+  { county: "Cache", gender: "male", leaning: "Dem/lean Dem", race: "White", age: "18–29", perspective: "Unaffiliated, Lean Left" },
 ];
-export const AGES = ["18-24", "25-34", "35-44", "45-54", "55-64", "65+"];
 
 /**
  * Learning-materials cards. Every card is just: title, url (or file), and the
