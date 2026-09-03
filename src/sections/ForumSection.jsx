@@ -64,11 +64,12 @@ export default function ForumSection() {
 
               {visible.map((id) => {
                 const n = nodes[id];
-                const low = n.cy < 40;
+                const low = n.cy < 46;
+                const flip = n.cx > 100; // right half -> open the tip leftwards
                 return (
                   <div
                     key={id}
-                    className={`ucg-tip${low ? " ucg-tip-lo" : ""}`}
+                    className={`ucg-tip${low ? " ucg-tip-lo" : ""}${flip ? " ucg-tip-flip" : ""}`}
                     style={{ left: `${(n.cx / 200) * 100}%`, top: `${(n.cy / 200) * 100}%` }}
                   >
                     {n.county} County

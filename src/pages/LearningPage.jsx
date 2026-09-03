@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Rings from "../components/Rings.jsx";
 import { ACCESS_MATERIALS, RESOURCES } from "../data.js";
 
@@ -22,9 +21,6 @@ export default function LearningPage() {
     <div className="ucg-page">
       <Rings style={{ top: -380, right: -340 }} />
       <div className="ucg-page-inner">
-        <Link className="ucg-back" to="/">
-          ← Back to the Forum
-        </Link>
         <h1 className="ucg-display" style={{ maxWidth: "18ch" }}>
           Learning <span className="o">materials.</span>
         </h1>

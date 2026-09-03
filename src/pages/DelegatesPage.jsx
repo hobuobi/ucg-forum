@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Rings from "../components/Rings.jsx";
 import { PORTAL_CODE, PORTAL_DOC } from "../data.js";
 
@@ -21,9 +20,6 @@ export default function DelegatesPage() {
     <div className="ucg-page">
       <Rings style={{ top: -380, left: -340 }} />
       <div className="ucg-page-inner">
-        <Link className="ucg-back" to="/">
-          ← Back to the Forum
-        </Link>
         <h1 className="ucg-display" style={{ maxWidth: "20ch" }}>
           Delegate <span className="o">portal.</span>
         </h1>

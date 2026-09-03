@@ -306,9 +306,13 @@ html { overflow-x: hidden; }
   background: #2B140C; color: #fff; border-radius: 7px;
   padding: 10px 13px; font-size: 14.5px; font-weight: 500; line-height: 1.4;
   box-shadow: 0 8px 20px rgba(43,20,12,0.28); white-space: nowrap;
-  transform: translate(-6px, -100%);
+  max-width: min(70vw, 260px);
+  transform: translate(-8px, -100%);
 }
-.ucg-tip-lo { transform: translate(-6px, 8px); }
+.ucg-tip-lo { transform: translate(-8px, 8px); }
+/* node in the right half: anchor the tip's right edge to it, opening leftwards */
+.ucg-tip-flip { transform: translate(calc(-100% + 8px), -100%); }
+.ucg-tip-flip.ucg-tip-lo { transform: translate(calc(-100% + 8px), 8px); }
 
 /* ---------- signup ---------- */
 .ucg-signup { background: var(--orange); color: #fff; text-align: center; }
@@ -337,8 +341,6 @@ html { overflow-x: hidden; }
 /* ---------- subpages ---------- */
 .ucg-page { padding: 176px 56px 110px; position: relative; min-height: 100vh; }
 .ucg-page-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; }
-.ucg-back { font-size: 15px; font-weight: 700; color: var(--brown-mute); margin-bottom: 26px; display: inline-flex; gap: 8px; }
-.ucg-back:hover { color: var(--orange); }
 /* ---- learning materials ---- */
 .ucg-lm-section { margin-top: 46px; }
 .ucg-lm-head { font-size: clamp(23px, 2.4vw, 33px); font-weight: 800; letter-spacing: -0.03em; color: var(--olive); margin: 0; }
@@ -396,6 +398,8 @@ html { overflow-x: hidden; }
   .ucg-nav { display: none; }
   /* the concentric-ring backdrops are a desktop-only flourish */
   .ucg-signup .ucg-rings { display: none; }
+  /* smaller delegate tip so it can't get clipped in the narrow cluster */
+  .ucg-tip { font-size: 12.5px; padding: 8px 11px; max-width: 62vw; }
   /* keep the full-viewport section so the base `align-items: center` keeps
      each section's content vertically centred on mobile too */
   .ucg-section { padding: 96px 20px 72px; min-height: 100vh; min-height: 100svh; }
