@@ -43,9 +43,5 @@ export const IMAGES = {
       src: `${base}/table-convo-2.webp`,
       alt: "A room of Utah residents in conversation around white round tables",
     },
-    "solutions-forum": {
-      src: `${base}/solutions-forum.webp`,
-      alt: "Illustration of about forty delegates as a rounded crowd of sketched faces",
-    },
   },
 };

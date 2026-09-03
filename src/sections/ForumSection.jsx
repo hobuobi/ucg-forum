@@ -1,13 +1,10 @@
 import { useMemo, useState } from "react";
 import Rings from "../components/Rings.jsx";
-import Arrow from "../components/Arrow.jsx";
 import { layoutDelegates } from "../lib/delegates.js";
-import { useSite } from "../lib/navigation.js";
 
-const SAMPLE_IDS = [7, 18, 31];
+const SAMPLE_IDS = [18];
 
 export default function ForumSection() {
-  const { go } = useSite();
   const nodes = useMemo(layoutDelegates, []);
   const [hovered, setHovered] = useState(null);
   const [showSamples, setShowSamples] = useState(true);
@@ -19,19 +16,27 @@ export default function ForumSection() {
   const visible = hovered != null ? [hovered] : showSamples ? SAMPLE_IDS : [];
 
   return (
-    <section className="ucg-section" id="forum">
+    <section className="ucg-section ucg-forum" id="forum">
       <Rings
-        style={{ top: "50%", right: -420, transform: "translateY(-50%)" }}
-        radii={[200, 275, 350, 425]}
+        style={{ top: "50%", right: -460, transform: "translateY(-50%)" }}
+        stroke="rgba(255,255,255,0.09)"
+        width={42}
+        radii={[200, 285, 370, 455]}
       />
       <div className="ucg-inner">
-        <div className="ucg-split">
+        <h2 className="ucg-forum-lead">
+          Next, we are organizing a Two-Day Solutions Forum to develop broadly
+          supported recommendations that can ensure the public has a meaningful
+          role in AI-related decision making.
+        </h2>
+
+        <div className="ucg-split ucg-forum-split">
           <div className="ucg-forum-viz">
             <div className="ucg-cluster">
               <svg
                 viewBox="0 0 200 200"
                 role="group"
-                aria-label="Forty delegates, selected to reflect Utah"
+                aria-label="Forty delegates, selected to reflect Utah, Salt Lake and Cache Counties"
               >
                 {nodes.map((n) => (
                   <circle
@@ -81,22 +86,14 @@ export default function ForumSection() {
           </div>
 
           <div className="ucg-forum-copy">
-            <h2 className="ucg-display">
-              <span className="o">40 residents</span> will develop policy proposals.
-            </h2>
-            <p className="ucg-body" style={{ maxWidth: "34ch" }}>
-              They&rsquo;ll be supported by experts in facilitation and public policy, free from
-              the influence of special interests.
+            <h3 className="ucg-forum-subhead">About the Solutions Forum</h3>
+            <p className="ucg-forum-body">
+              40 people, selected to reflect the demographics of Utah, Salt Lake and
+              Cache Counties, will convene for two full days in September to listen, talk
+              and learn, and then develop policy recommendations that can help ensure the
+              public has ample opportunity to play a positive role in AI policy decisions
+              affecting the state going forward.
             </p>
-            <button
-              className="ucg-link"
-              onClick={() => go({ kind: "route", target: "delegates" })}
-            >
-              Learn about the assembly{" "}
-              <span>
-                <Arrow />
-              </span>
-            </button>
           </div>
         </div>
       </div>

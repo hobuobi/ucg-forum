@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="ucg-hero-copy">
           <span className="ucg-pill">September 17–18, 2026</span>
           <h1 className="ucg-display">
-            What role should Utahns have in decisions around AI?
+            What role should the public have in shaping decisions related to AI?
           </h1>
           <p className="ucg-sub">
             A <span className="o">Solutions Forum,</span> hosted by Utah Common Ground

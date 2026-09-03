@@ -37,29 +37,22 @@ export const STEPS = [
     id: "open-poll",
     title: "Open Poll",
     blurb:
-      "Over 500 Utahns shared their perspectives online, identifying areas of interest and consensus across the public.",
+      "From March through July 2026, over 500 Utahns shared their perspectives online, identifying areas of interest and consensus across the public.",
     image: IMAGES.process["open-poll"],
   },
   {
     id: "community-conversations",
     title: "Community Conversations",
     blurb:
-      "We ran over 10 live conversations online and in person to dig into our people’s stories related to this topic.",
+      "In the spring of 2026, Utah Common Ground organized nine conversations in Utah, Salt Lake and Cache Counties, both in-person and online, and invited people to join others in thinking about how people are using AI, share stories, and identify what issues are of greatest concern and which hold the greatest promise.",
     // image coming later
   },
   {
     id: "cache-county-forum",
     title: "Cache County Forum",
     blurb:
-      "30 Utahns of different backgrounds came together for a three hour conversation about public participation and AI.",
+      "30 Cache County residents from a range of backgrounds gathered for a three-hour discussion about what they thought meaningful public consultation on AI-related questions should entail, for the purpose of considering their own ideas, while also having the chance to hear and learn from others.",
     image: IMAGES.process["cache-county-forum"],
-  },
-  {
-    id: "solutions-forum",
-    title: "Solutions Forum",
-    blurb:
-      "Now, 40 randomly-selected residents will learn together and develop policy recommendations.",
-    image: IMAGES.process["solutions-forum"],
   },
 ];
 

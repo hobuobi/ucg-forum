@@ -133,11 +133,12 @@ export default function ProcessSection() {
         <div className="ucg-split">
           <div>
             <h2 className="ucg-display">
-              AI has huge implications for <span className="o">Utah&rsquo;s future.</span>
+              AI has huge implications for <span className="o">Utah&rsquo;s future&hellip;</span>
             </h2>
             <p className="ucg-body">
-              We&rsquo;ve engaged over 500 residents to understand their priorities, from
-              environmental impact to transparency and public control.
+              &hellip;so we&rsquo;ve been engaging Utahns since March 2026 in dialogue related
+              to how AI is affecting people&rsquo;s lives, and how best to influence what
+              happens next.
             </p>
             <button
               className="ucg-link"

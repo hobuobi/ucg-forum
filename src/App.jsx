@@ -45,9 +45,23 @@ export default function App() {
     [location.pathname, navigate, scrollToId],
   );
 
-  // Reset the inverted nav on every route change; sections re-assert it.
+  // Light nav treatment while any dark-background section is >55% on screen.
+  // One observer over all of them, recomputing from the full picture, so the
+  // forum/signup hand-off can't race.
   useEffect(() => {
     setInvert(false);
+    const els = document.querySelectorAll(".ucg-forum, .ucg-signup");
+    if (!els.length) return;
+    const ratios = new Map();
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) ratios.set(e.target, e.intersectionRatio);
+        setInvert([...ratios.values()].some((r) => r > 0.55));
+      },
+      { threshold: [0, 0.55, 1] },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, [location.pathname]);
 
   // Scroll behaviour on navigation: honour a hash, otherwise go to the top.
@@ -62,7 +76,7 @@ export default function App() {
   }, [location.pathname, location.hash, scrollToId]);
 
   const current = CURRENT_BY_PATH[location.pathname] ?? null;
-  const ctx = useMemo(() => ({ go, setInvert }), [go]);
+  const ctx = useMemo(() => ({ go }), [go]);
 
   return (
     <SiteContext.Provider value={ctx}>

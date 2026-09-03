@@ -1,28 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Rings from "../components/Rings.jsx";
 import Arrow from "../components/Arrow.jsx";
 import { useSite } from "../lib/navigation.js";
 
 export default function SignupSection() {
-  const { go, setInvert } = useSite();
-  const ref = useRef(null);
+  const { go } = useSite();
   const [email, setEmail] = useState("");
   const [state, setState] = useState("idle");
-
-  // Invert the fixed nav while the orange panel is on screen.
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([e]) => setInvert(e.intersectionRatio > 0.55),
-      { threshold: [0, 0.55, 1] },
-    );
-    io.observe(el);
-    return () => {
-      io.disconnect();
-      setInvert(false);
-    };
-  }, [setInvert]);
 
   const submit = () => {
     const ok = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
@@ -35,7 +19,7 @@ export default function SignupSection() {
   };
 
   return (
-    <section className="ucg-section ucg-signup" id="signup" ref={ref}>
+    <section className="ucg-section ucg-signup" id="signup">
       <Rings
         style={{ top: "50%", left: -560, transform: "translateY(-50%)" }}
         stroke="rgba(255,255,255,0.12)"

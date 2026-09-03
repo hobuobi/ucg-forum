@@ -1,15 +1,10 @@
 import { createContext, useContext } from "react";
 
 /**
- * Shared navigation + chrome context.
- *  - go(item):   navigate for a NAV-shaped item ({ kind, target }).
- *  - setInvert:  toggle the light-on-orange nav treatment (used by the
- *                signup section while it is on screen).
+ * Shared navigation context.
+ *  - go(item): navigate for a NAV-shaped item ({ kind, target }).
  */
-export const SiteContext = createContext({
-  go: () => {},
-  setInvert: () => {},
-});
+export const SiteContext = createContext({ go: () => {} });
 
 export const useSite = () => useContext(SiteContext);
 
