@@ -296,8 +296,6 @@ html { overflow-x: hidden; }
   transform: translate(-6px, -100%);
 }
 .ucg-tip-lo { transform: translate(-6px, 8px); }
-.ucg-hint { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--brown-mute); text-align: center; margin: 26px 0 0; }
-.ucg-forum .ucg-hint { color: rgba(255, 255, 255, 0.72); }
 
 /* ---------- signup ---------- */
 .ucg-signup { background: var(--orange); color: #fff; text-align: center; }

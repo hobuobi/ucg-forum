@@ -82,7 +82,6 @@ export default function ForumSection() {
                 );
               })}
             </div>
-            <p className="ucg-hint">Hover a delegate</p>
           </div>
 
           <div className="ucg-forum-copy">

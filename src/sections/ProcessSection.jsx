@@ -1,9 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Rings from "../components/Rings.jsx";
-import Arrow from "../components/Arrow.jsx";
 import { STEPS, STEP_MS } from "../data.js";
 import { usePrefersReducedMotion, useIsNarrow } from "../lib/hooks.js";
-import { useSite } from "../lib/navigation.js";
 
 /**
  * The element type and DOM shape stay identical whether the card is open or
@@ -54,7 +52,6 @@ function MobileCard({ step }) {
 }
 
 export default function ProcessSection() {
-  const { go } = useSite();
   const reduced = usePrefersReducedMotion();
   const narrow = useIsNarrow(900);
   const [active, setActive] = useState(0);
@@ -140,15 +137,6 @@ export default function ProcessSection() {
               to how AI is affecting people&rsquo;s lives, and how best to influence what
               happens next.
             </p>
-            <button
-              className="ucg-link"
-              onClick={() => go({ kind: "anchor", target: "forum" })}
-            >
-              Learn about our process{" "}
-              <span>
-                <Arrow />
-              </span>
-            </button>
           </div>
 
           {narrow ? (
