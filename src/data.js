@@ -7,15 +7,21 @@ import { IMAGES } from "./images.js";
 
 /**
  * Primary navigation.
- *  - kind "anchor": a section on the home page. `target` is the element id
+ *  - kind "anchor":   a section on the home page. `target` is the element id
  *    and the URL hash (e.g. "/#process").
- *  - kind "route": a standalone page. `target` is the path segment.
+ *  - kind "route":    a standalone page. `target` is the path segment.
+ *  - kind "external": an off-site link opened in a new tab. `href` is the URL.
  */
 export const NAV = [
   { label: "The Process", kind: "anchor", target: "process" },
-  { label: "The Forum", kind: "anchor", target: "forum" },
+  { label: "The Solutions Forum", kind: "anchor", target: "forum" },
   { label: "Learning Materials", kind: "route", target: "learning" },
-  { label: "Delegate Portal", kind: "route", target: "delegates" },
+  {
+    label: "More about Utah Common Ground",
+    kind: "external",
+    href: "https://www.utahcommonground.org/",
+  },
+  { label: "Delegate Portal", kind: "route", target: "delegates", pill: true },
 ];
 
 /**

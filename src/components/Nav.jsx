@@ -3,11 +3,10 @@ import { Link } from "react-router-dom";
 import { NAV } from "../data.js";
 import { pathForItem, useSite } from "../lib/navigation.js";
 import { useIsNarrow } from "../lib/hooks.js";
-import Rings from "./Rings.jsx";
 
 export default function Nav({ invert, current }) {
   const { go } = useSite();
-  const mobile = useIsNarrow(900);
+  const mobile = useIsNarrow(1080);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -34,17 +33,37 @@ export default function Nav({ invert, current }) {
     go(item);
   };
 
-  const links = NAV.map((item) => (
-    <Link
-      key={item.label}
-      to={pathForItem(item)}
-      className={current === item.target ? "ucg-nav-current" : undefined}
-      onClick={(e) => handle(e, item)}
-      tabIndex={mobile && !open ? -1 : 0}
-    >
-      {item.label}
-    </Link>
-  ));
+  const tabIndex = mobile && !open ? -1 : 0;
+  const links = NAV.map((item) =>
+    item.kind === "external" ? (
+      <a
+        key={item.label}
+        href={item.href}
+        target="_blank"
+        rel="noreferrer noopener"
+        tabIndex={tabIndex}
+        onClick={() => setOpen(false)}
+      >
+        {item.label}
+      </a>
+    ) : (
+      <Link
+        key={item.label}
+        to={pathForItem(item)}
+        className={
+          item.pill
+            ? "ucg-nav-pill"
+            : current === item.target
+              ? "ucg-nav-current"
+              : undefined
+        }
+        onClick={(e) => handle(e, item)}
+        tabIndex={tabIndex}
+      >
+        {item.label}
+      </Link>
+    ),
+  );
 
   if (mobile) {
     return (
@@ -63,12 +82,6 @@ export default function Nav({ invert, current }) {
           </span>
         </button>
         <div className={`ucg-sheet${open ? " is-open" : ""}`}>
-          <Rings
-            style={{ bottom: -420, left: -300 }}
-            stroke="rgba(255,255,255,0.13)"
-            width={40}
-            radii={[180, 260, 340, 420]}
-          />
           <nav className="ucg-sheet-nav" aria-label="Main">
             {links}
           </nav>

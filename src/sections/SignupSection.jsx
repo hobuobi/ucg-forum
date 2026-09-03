@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Rings from "../components/Rings.jsx";
 import Arrow from "../components/Arrow.jsx";
 import { useSite } from "../lib/navigation.js";
 
@@ -19,9 +20,21 @@ export default function SignupSection() {
 
   return (
     <section className="ucg-section ucg-signup" id="signup">
+      <Rings
+        style={{ top: "50%", left: -560, transform: "translateY(-50%)" }}
+        stroke="rgba(255,255,255,0.12)"
+        width={44}
+        radii={[200, 290, 380, 470]}
+      />
+      <Rings
+        style={{ top: "50%", right: -560, transform: "translateY(-50%)" }}
+        stroke="rgba(255,255,255,0.12)"
+        width={44}
+        radii={[200, 290, 380, 470]}
+      />
       <div className="ucg-inner">
         <div className="ucg-signup-inner">
-          <h2 className="ucg-display">Be part of the solution.</h2>
+          <h2 className="ucg-display">Stay in touch.</h2>
           <p className="ucg-signup-sub">
             Share your email to receive updates from Utah Common Ground.
           </p>

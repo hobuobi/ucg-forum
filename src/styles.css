@@ -42,8 +42,8 @@ html { overflow-x: hidden; }
 .ucg-rule { position: fixed; top: 0; left: 0; right: 0; height: 6px; background: var(--orange); z-index: 60; }
 .ucg-nav {
   position: fixed; top: 6px; left: 0; right: 0; z-index: 55;
-  display: flex; justify-content: flex-end; align-items: center; gap: 44px;
-  padding: 26px 56px;
+  display: flex; justify-content: flex-end; align-items: center; gap: 30px;
+  padding: 24px 44px;
   background: rgba(253, 241, 227, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -58,12 +58,25 @@ html { overflow-x: hidden; }
   background: rgba(238, 123, 60, 0.68);
   border-bottom-color: rgba(255, 255, 255, 0.18);
 }
-.ucg-nav a { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: var(--olive); padding: 4px 0; }
+.ucg-nav a { font-size: 15.5px; font-weight: 700; letter-spacing: -0.01em; color: var(--olive); padding: 4px 0; white-space: nowrap; }
 .ucg-nav a:hover { color: var(--orange); }
 .ucg-nav.is-invert a { color: rgba(255,255,255,0.92); }
 .ucg-nav.is-invert a:hover { color: #fff; }
 .ucg-nav.is-invert :focus-visible { outline-color: #fff; }
 .ucg-nav .ucg-nav-current { color: var(--orange) !important; }
+/* external link gets a small outbound arrow */
+.ucg-nav a[target="_blank"]::after,
+.ucg-sheet-nav a[target="_blank"]::after { content: " \2197"; opacity: 0.65; }
+
+/* Delegate Portal pill — orange with white text; inverts to white-on-orange
+   when the nav itself goes orange over a dark section */
+.ucg-nav a.ucg-nav-pill {
+  background: var(--orange); color: #fff; padding: 8px 18px; border-radius: 999px;
+  transition: background 180ms ease, color 180ms ease;
+}
+.ucg-nav a.ucg-nav-pill:hover { background: #DD6A2C; color: #fff; }
+.ucg-nav.is-invert a.ucg-nav-pill { background: #fff; color: var(--orange); }
+.ucg-nav.is-invert a.ucg-nav-pill:hover { background: rgba(255, 255, 255, 0.88); color: var(--orange); }
 .ucg-navtoggle { display: none; }
 
 /* ---------- mobile menu ---------- */
@@ -86,8 +99,8 @@ html { overflow-x: hidden; }
 
 .ucg-sheet {
   position: fixed; inset: 0; z-index: 70; background: var(--orange);
-  display: flex; align-items: center; padding: 104px 28px 48px;
-  overflow: hidden;
+  display: grid; align-content: center; padding: 80px 26px 40px;
+  overflow-x: hidden; overflow-y: auto;
   transform: translateY(-100%); visibility: hidden;
   transition: transform 480ms cubic-bezier(0.32,0.72,0.24,1), visibility 0s linear 480ms;
 }
@@ -95,10 +108,10 @@ html { overflow-x: hidden; }
   transform: translateY(0); visibility: visible;
   transition: transform 480ms cubic-bezier(0.32,0.72,0.24,1), visibility 0s linear 0s;
 }
-.ucg-sheet-nav { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.ucg-sheet-nav { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 4px; width: 100%; }
 .ucg-sheet-nav a {
-  font-size: clamp(34px, 9.5vw, 52px); font-weight: 800; line-height: 1.05;
-  letter-spacing: -0.038em; color: #fff; text-align: left; padding: 8px 0;
+  font-size: clamp(26px, 7vw, 40px); font-weight: 800; line-height: 1.1;
+  letter-spacing: -0.035em; color: #fff; text-align: left; padding: 7px 0;
   overflow-wrap: break-word;
   opacity: 0; transform: translateY(-18px);
   transition: opacity 300ms ease, transform 420ms cubic-bezier(0.32,0.72,0.24,1);
@@ -266,18 +279,18 @@ html { overflow-x: hidden; }
 /* ---------- forum (green) section ---------- */
 .ucg-forum { background: var(--olive); color: #fff; }
 .ucg-forum-lead {
-  text-align: center; max-width: 900px; margin: 0 auto;
-  font-size: clamp(22px, 2.4vw, 32px); font-weight: 800;
-  line-height: 1.3; letter-spacing: -0.018em; color: #fff;
+  text-align: center; max-width: 960px; margin: 0 auto;
+  font-size: clamp(24px, 2.9vw, 39px); font-weight: 800;
+  line-height: 1.28; letter-spacing: -0.02em; color: #fff;
 }
-.ucg-forum-split { margin-top: 66px; align-items: center; }
+.ucg-forum-split { margin-top: 68px; align-items: center; }
 .ucg-forum-subhead {
-  font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 14px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
   color: rgba(255, 255, 255, 0.72); margin: 0 0 16px;
 }
 .ucg-forum-body {
-  font-size: clamp(16px, 1.35vw, 20px); line-height: 1.6;
-  color: rgba(255, 255, 255, 0.94); margin: 0; max-width: 48ch;
+  font-size: clamp(17px, 1.6vw, 23px); line-height: 1.6;
+  color: rgba(255, 255, 255, 0.94); margin: 0; max-width: 46ch;
 }
 
 /* ---------- forum dot cluster ---------- */
@@ -381,6 +394,8 @@ html { overflow-x: hidden; }
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .ucg-nav { display: none; }
+  /* the concentric-ring backdrops are a desktop-only flourish */
+  .ucg-signup .ucg-rings { display: none; }
   /* keep the full-viewport section so the base `align-items: center` keeps
      each section's content vertically centred on mobile too */
   .ucg-section { padding: 96px 20px 72px; min-height: 100vh; min-height: 100svh; }
