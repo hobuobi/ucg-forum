@@ -42,8 +42,8 @@ html { overflow-x: hidden; }
 .ucg-rule { position: fixed; top: 0; left: 0; right: 0; height: 6px; background: var(--orange); z-index: 60; }
 .ucg-nav {
   position: fixed; top: 6px; left: 0; right: 0; z-index: 55;
-  display: flex; justify-content: flex-end; align-items: center; gap: 30px;
-  padding: 24px 44px;
+  display: flex; justify-content: space-between; align-items: center; gap: 32px;
+  padding: 22px 44px;
   background: rgba(253, 241, 227, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -58,6 +58,12 @@ html { overflow-x: hidden; }
   background: rgba(238, 123, 60, 0.68);
   border-bottom-color: rgba(255, 255, 255, 0.18);
 }
+.ucg-nav-links { display: flex; align-items: center; gap: 30px; }
+/* homepage wordmark — same face/colour as the nav links, a bit larger */
+.ucg-nav .ucg-brand { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; color: var(--olive); white-space: nowrap; padding: 4px 0; }
+.ucg-nav .ucg-brand:hover { color: var(--orange); }
+.ucg-nav.is-invert .ucg-brand { color: rgba(255, 255, 255, 0.92); }
+.ucg-nav.is-invert .ucg-brand:hover { color: #fff; }
 .ucg-nav a { font-size: 15.5px; font-weight: 700; letter-spacing: -0.01em; color: var(--olive); padding: 4px 0; white-space: nowrap; }
 .ucg-nav a:hover { color: var(--orange); }
 .ucg-nav.is-invert a { color: rgba(255,255,255,0.92); }
@@ -121,7 +127,14 @@ html { overflow-x: hidden; }
 .ucg-sheet.is-open .ucg-sheet-nav a:nth-child(2) { transition-delay: 220ms; }
 .ucg-sheet.is-open .ucg-sheet-nav a:nth-child(3) { transition-delay: 280ms; }
 .ucg-sheet.is-open .ucg-sheet-nav a:nth-child(4) { transition-delay: 340ms; }
+.ucg-sheet.is-open .ucg-sheet-nav a:nth-child(5) { transition-delay: 400ms; }
+.ucg-sheet.is-open .ucg-sheet-nav a:nth-child(6) { transition-delay: 460ms; }
 .ucg-sheet-nav a.ucg-nav-current { color: var(--brown); }
+/* the wordmark sits above the menu items as a small header */
+.ucg-sheet-nav .ucg-brand {
+  font-size: clamp(15px, 4vw, 19px); font-weight: 800; letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.82); margin-bottom: 18px;
+}
 .ucg-sheet :focus-visible { outline-color: #fff; }
 /* flush to the corner, so pull the focus ring inward instead of outward */
 .ucg-burger:focus-visible { outline-color: #fff; outline-offset: -6px; border-radius: 0; }

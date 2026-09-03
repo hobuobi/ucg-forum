@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { NAV } from "../data.js";
 import { pathForItem, useSite } from "../lib/navigation.js";
 import { useIsNarrow } from "../lib/hooks.js";
 
 export default function Nav({ invert, current }) {
   const { go } = useSite();
-  const mobile = useIsNarrow(1080);
+  const { pathname } = useLocation();
+  const mobile = useIsNarrow(1160);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -34,6 +35,24 @@ export default function Nav({ invert, current }) {
   };
 
   const tabIndex = mobile && !open ? -1 : 0;
+
+  const brand = (
+    <Link
+      to="/"
+      className="ucg-brand"
+      tabIndex={tabIndex}
+      onClick={(e) => {
+        setOpen(false);
+        if (pathname === "/") {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }}
+    >
+      Utah Solutions Forum
+    </Link>
+  );
+
   const links = NAV.map((item) =>
     item.kind === "external" ? (
       <a
@@ -83,6 +102,7 @@ export default function Nav({ invert, current }) {
         </button>
         <div className={`ucg-sheet${open ? " is-open" : ""}`}>
           <nav className="ucg-sheet-nav" aria-label="Main">
+            {brand}
             {links}
           </nav>
         </div>
@@ -94,7 +114,8 @@ export default function Nav({ invert, current }) {
     <>
       <div className="ucg-rule" />
       <nav className={`ucg-nav${invert ? " is-invert" : ""}`} aria-label="Main">
-        {links}
+        {brand}
+        <div className="ucg-nav-links">{links}</div>
       </nav>
     </>
   );
