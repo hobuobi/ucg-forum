@@ -332,23 +332,21 @@ html { overflow-x: hidden; }
 .ucg-signup .ucg-display { color: #fff; }
 .ucg-signup-inner { position: relative; z-index: 2; max-width: 660px; margin: 0 auto; }
 .ucg-signup-sub { font-size: clamp(18px,1.6vw,23px); line-height: 1.45; color: rgba(255,255,255,0.94); margin: 22px 0 0; }
-.ucg-field { position: relative; margin: 44px auto 0; max-width: 600px; }
-.ucg-field input {
-  width: 100%; height: 78px; border-radius: 999px; border: 3px solid transparent;
-  background: #fff; padding: 0 92px 0 34px; font-size: 19px; color: var(--brown);
-  transition: border-color 180ms ease;
+.ucg-signup .ucg-signup-cta {
+  display: inline-flex; align-items: center; gap: 16px;
+  margin: 44px auto 0; height: 78px; padding: 0 12px 0 36px;
+  background: #fff; color: var(--brown); border-radius: 999px;
+  font-size: 19px; font-weight: 700;
+  box-shadow: 0 10px 26px rgba(59, 30, 18, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
-.ucg-field input::placeholder { color: rgba(59,30,18,0.5); }
-.ucg-field.is-bad input { border-color: #7A2E12; }
-.ucg-field button {
-  position: absolute; right: 12px; top: 12px; width: 54px; height: 54px; border-radius: 999px;
-  background: var(--brown); color: #fff; display: grid; place-items: center;
-  transition: transform 180ms ease, background 180ms ease;
+.ucg-signup-cta:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(59, 30, 18, 0.24); }
+.ucg-signup-cta-icon {
+  width: 54px; height: 54px; border-radius: 999px; flex: 0 0 auto;
+  background: var(--brown); display: grid; place-items: center;
+  transition: background 180ms ease;
 }
-.ucg-field button:hover { transform: scale(1.06); background: #2B140C; }
-.ucg-msg { min-height: 24px; margin: 16px 0 0; font-size: 16px; font-weight: 600; }
-.ucg-msg.is-bad { color: #6E2A10; }
-.ucg-msg.is-ok { color: #fff; }
+.ucg-signup-cta:hover .ucg-signup-cta-icon { background: #2B140C; }
 .ucg-signup .ucg-link { color: #fff; font-size: clamp(17px,1.4vw,21px); margin-top: 46px; }
 
 /* ---------- subpages ---------- */
@@ -455,8 +453,8 @@ html { overflow-x: hidden; }
 }
 @media (max-width: 620px) {
   .ucg-grid { grid-template-columns: 1fr; }
-  .ucg-field input { height: 66px; padding: 0 74px 0 24px; font-size: 16px; }
-  .ucg-field button { width: 46px; height: 46px; top: 10px; right: 10px; }
+  .ucg-signup-cta { height: 66px; padding: 0 8px 0 28px; font-size: 17px; }
+  .ucg-signup-cta-icon { width: 46px; height: 46px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ucg * { animation: none !important; transition: none !important; }
