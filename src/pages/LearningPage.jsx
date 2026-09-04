@@ -1,5 +1,5 @@
 import Rings from "../components/Rings.jsx";
-import { ACCESS_MATERIALS, RESOURCES } from "../data.js";
+import { ACCESS_MATERIALS } from "../data.js";
 
 function SourceCard({ item, primary }) {
   const isFile = Boolean(item.file);
@@ -41,14 +41,7 @@ export default function LearningPage() {
 
         <section className="ucg-lm-section">
           <h2 className="ucg-lm-head">Other Helpful Resources</h2>
-          <p className="ucg-lm-sub">
-            Additional sources to learn about AI and public participation in Utah.
-          </p>
-          <div className="ucg-grid">
-            {RESOURCES.map((item) => (
-              <SourceCard item={item} key={item.title} />
-            ))}
-          </div>
+          <p className="ucg-lm-sub">Coming soon.</p>
         </section>
       </div>
     </div>

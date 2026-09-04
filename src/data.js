@@ -126,12 +126,14 @@ export const ACCESS_MATERIALS = [
     kind: "PDF",
   },
   {
-    title: "Briefing Video",
+    title: "Briefing Video (Coming Soon)",
     source: "Utah Common Ground",
     url: "#",
   },
 ];
 
+// Not currently rendered — the Learning Materials page shows "Coming soon"
+// for this section until there's real content to publish. Keep this ready.
 export const RESOURCES = [
   {
     title: "What is generative AI, in plain terms",

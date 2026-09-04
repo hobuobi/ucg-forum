@@ -1,10 +1,7 @@
 import Rings from "../components/Rings.jsx";
 import Arrow from "../components/Arrow.jsx";
-import { useSite } from "../lib/navigation.js";
 
 export default function SignupSection() {
-  const { go } = useSite();
-
   return (
     <section className="ucg-section ucg-signup" id="signup">
       <Rings
@@ -37,16 +34,6 @@ export default function SignupSection() {
               <Arrow size={20} color="#fff" />
             </span>
           </a>
-
-          <button
-            className="ucg-link"
-            onClick={() => go({ kind: "route", target: "learning" })}
-          >
-            Access the learning materials to follow along{" "}
-            <span>
-              <Arrow />
-            </span>
-          </button>
         </div>
       </div>
     </section>

@@ -347,7 +347,6 @@ html { overflow-x: hidden; }
   transition: background 180ms ease;
 }
 .ucg-signup-cta:hover .ucg-signup-cta-icon { background: #2B140C; }
-.ucg-signup .ucg-link { color: #fff; font-size: clamp(17px,1.4vw,21px); margin-top: 46px; }
 
 /* ---------- subpages ---------- */
 .ucg-page { padding: 176px 56px 110px; position: relative; min-height: 100vh; }
