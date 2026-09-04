@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Rings from "../components/Rings.jsx";
-import { PORTAL_CODE, PORTAL_DOC } from "../data.js";
+import { PORTAL_CODE, PORTAL_DOC, PORTAL_CONTACT_EMAIL } from "../data.js";
 
 export default function DelegatesPage() {
   const [pass, setPass] = useState("");
@@ -75,6 +75,11 @@ export default function DelegatesPage() {
                 )}
               </section>
             ))}
+            <p className="ucg-doc-contact">
+              Contact{" "}
+              <a href={`mailto:${PORTAL_CONTACT_EMAIL}`}>{PORTAL_CONTACT_EMAIL}</a> with any
+              questions.
+            </p>
           </div>
         )}
       </div>

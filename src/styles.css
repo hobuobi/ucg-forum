@@ -405,6 +405,13 @@ html { overflow-x: hidden; }
 .ucg-doc p { font-size: 17px; line-height: 1.55; margin: 0 0 10px; max-width: 62ch; }
 .ucg-doc ul { margin: 0; padding-left: 22px; }
 .ucg-doc li { font-size: 17px; line-height: 1.6; margin-bottom: 6px; }
+.ucg-doc .ucg-doc-contact {
+  margin: 0; padding-top: 22px;
+  border-top: 1px solid rgba(59, 30, 18, 0.12);
+  font-size: 16px; color: var(--brown-mute);
+}
+.ucg-doc .ucg-doc-contact a { color: var(--orange); font-weight: 700; }
+.ucg-doc .ucg-doc-contact a:hover { color: #DD6A2C; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {

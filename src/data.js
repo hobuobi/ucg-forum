@@ -169,26 +169,21 @@ export const PORTAL_CODE = "utah2026";
 
 export const PORTAL_DOC = [
   {
-    h: "Basic logistics",
-    p: ["The Forum runs Thursday, September 17 through Friday, September 18. Both days begin at 8:30 a.m. and end by 5:00 p.m. Meals are provided."],
-    ul: ["Venue: TBC, downtown Salt Lake City", "Doors and check-in open at 8:00 a.m.", "Free parking in the adjacent structure; validate at the front desk", "Nearest transit: TRAX Blue and Green lines"],
+    h: "Basic Logistics",
+    p: [
+      "The Forum runs Friday, September 18 through Saturday, September 19. Both days begin at 8:30 a.m. and end by 6:00 p.m. Meals are provided.",
+    ],
+    ul: [
+      "Venue: 42 E. Future Way, Draper, Utah",
+      "Doors and check-in open at 8:30 a.m.",
+      "Free parking in the adjacent lot; validate at the front desk",
+      "Nearest transit: TRAX Blue and Green lines",
+    ],
   },
   {
-    h: "Schedule",
-    p: ["Day one covers shared learning and questions for the expert panel. Day two is drafting, deliberation, and the final vote on recommendations."],
-    ul: ["Day 1 · Orientation, learning sessions, small-group discussion", "Day 1 · Expert panel and open Q&A", "Day 2 · Drafting recommendations at your table", "Day 2 · Full-assembly deliberation and vote"],
-  },
-  {
-    h: "What to bring",
-    p: ["Everything you need to participate will be provided. Bring yourself, and anything that makes a long day comfortable."],
-    ul: ["Photo ID for check-in", "Reading materials, if you'd like your notes on hand", "A sweater — the rooms run cold", "Any accessibility or dietary needs, sent ahead to the team"],
-  },
-  {
-    h: "Stipend",
-    p: ["Delegates receive a stipend for both days, plus reimbursement for travel, parking, and child or elder care. Payment is issued within 15 business days of the Forum. Submit receipts through the link emailed after check-in."],
-  },
-  {
-    h: "Contact",
-    p: ["Reach the delegate support line during business hours, or email the coordination team any time. Someone will be at the check-in desk both mornings from 8:00 a.m."],
+    h: "More information coming soon!",
+    p: ["The full schedule, what to bring, and stipend details will be posted here soon."],
   },
 ];
+
+export const PORTAL_CONTACT_EMAIL = "info@utahcommonground.org";
