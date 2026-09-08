@@ -18,7 +18,7 @@ export default function Hero() {
 
       <div className="ucg-inner">
         <div className="ucg-hero-copy">
-          <span className="ucg-pill">September 17–18, 2026</span>
+          <span className="ucg-pill">September 18–19, 2026</span>
           <h1 className="ucg-display">
             What role should the public have in shaping decisions related to AI?
           </h1>

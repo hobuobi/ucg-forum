@@ -1,7 +1,7 @@
 # Utah Common Ground — Solutions Forum
 
 A small React site for the Solutions Forum on the role Utahns should have in
-decisions around AI (September 17–18, 2026).
+decisions around AI (September 18–19, 2026).
 
 Built with [Vite](https://vite.dev) + [React](https://react.dev) +
 [React Router](https://reactrouter.com). It began as a single-file prototype

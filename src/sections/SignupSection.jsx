@@ -25,7 +25,7 @@ export default function SignupSection() {
 
           <a
             className="ucg-signup-cta"
-            href="https://www.utahcommonground.org/"
+            href="https://www.utahcommonground.org/#stayinvolved"
             target="_blank"
             rel="noreferrer noopener"
           >
