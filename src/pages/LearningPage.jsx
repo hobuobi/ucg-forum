@@ -8,10 +8,12 @@ function SourceCard({ item, primary }) {
       className={`ucg-source${primary ? " ucg-source-primary" : ""}`}
       href={isFile ? item.file : item.url}
       {...(isFile ? { download: item.download ?? "" } : {})}
+      {...(item.external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
     >
       <h3>{item.title}</h3>
       <p>From {item.source}</p>
       {isFile && <span className="ucg-source-file">↓ Download{item.kind ? ` ${item.kind}` : ""}</span>}
+      {!isFile && item.cta && <span className="ucg-source-file">{item.cta} ↗</span>}
     </a>
   );
 }

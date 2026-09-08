@@ -126,9 +126,11 @@ export const ACCESS_MATERIALS = [
     kind: "PDF",
   },
   {
-    title: "Briefing Video (Coming Soon)",
+    title: "Briefing Video",
     source: "Utah Common Ground",
-    url: "#",
+    url: "https://drive.google.com/file/d/192ZDHp8rYVs3IZy9G4nfEDIsY6eVh05q/view",
+    external: true,
+    cta: "Watch Video",
   },
 ];
 
