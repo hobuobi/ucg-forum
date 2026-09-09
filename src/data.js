@@ -126,6 +126,13 @@ export const ACCESS_MATERIALS = [
     kind: "PDF",
   },
   {
+    title: "Abbreviated Briefing Deck",
+    source: "Utah Common Ground",
+    file: "/docs/Utah%20Solutions%20Forum%20_%20Delegate%20Orientation%20090826.pdf",
+    download: "Abbreviated Briefing Deck.pdf",
+    kind: "PDF",
+  },
+  {
     title: "Briefing Video",
     source: "Utah Common Ground",
     url: "https://drive.google.com/file/d/192ZDHp8rYVs3IZy9G4nfEDIsY6eVh05q/view",
