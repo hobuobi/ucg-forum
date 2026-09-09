@@ -8,12 +8,10 @@ function SourceCard({ item, primary }) {
       className={`ucg-source${primary ? " ucg-source-primary" : ""}`}
       href={isFile ? item.file : item.url}
       {...(isFile ? { download: item.download ?? "" } : {})}
-      {...(item.external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
     >
       <h3>{item.title}</h3>
       <p>From {item.source}</p>
       {isFile && <span className="ucg-source-file">↓ Download{item.kind ? ` ${item.kind}` : ""}</span>}
-      {!isFile && item.cta && <span className="ucg-source-file">{item.cta} ↗</span>}
     </a>
   );
 }
@@ -27,9 +25,8 @@ export default function LearningPage() {
           Learning <span className="o">materials.</span>
         </h1>
 
-        <section className="ucg-lm-section">
-          <h2 className="ucg-lm-head">Access</h2>
-          <p className="ucg-lm-sub">
+        <section className="ucg-lm-section ucg-lm-section-lead">
+          <p className="ucg-lm-sub ucg-lm-lead">
             The official materials prepared for use by the Solutions Forum delegates.
           </p>
           <div className="ucg-grid ucg-grid-half">
@@ -37,6 +34,19 @@ export default function LearningPage() {
               <SourceCard item={item} primary key={item.title} />
             ))}
           </div>
+
+          <figure className="ucg-lm-video">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="/media/briefing-video-poster.jpg"
+            >
+              <source src="/media/briefing-video.mp4" type="video/mp4" />
+              Your browser can’t play embedded video.
+            </video>
+            <figcaption>Briefing Video — Utah Common Ground</figcaption>
+          </figure>
         </section>
 
         <hr className="ucg-lm-rule" />
