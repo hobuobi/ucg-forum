@@ -132,6 +132,13 @@ export const ACCESS_MATERIALS = [
     download: "Abbreviated Briefing Deck.pdf",
     kind: "PDF",
   },
+  {
+    title: "Policy Prompts",
+    source: "Utah Common Ground",
+    file: "/docs/UCG%20Policy%20Prompts.pdf",
+    download: "UCG Policy Prompts.pdf",
+    kind: "PDF",
+  },
 ];
 
 // Not currently rendered — the Learning Materials page shows "Coming soon"

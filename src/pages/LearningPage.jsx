@@ -29,7 +29,7 @@ export default function LearningPage() {
           <p className="ucg-lm-sub ucg-lm-lead">
             The official materials prepared for use by the Solutions Forum delegates.
           </p>
-          <div className="ucg-grid ucg-grid-half">
+          <div className="ucg-grid">
             {ACCESS_MATERIALS.map((item) => (
               <SourceCard item={item} primary key={item.title} />
             ))}
