@@ -198,3 +198,41 @@ export const PORTAL_DOC = [
 ];
 
 export const PORTAL_CONTACT_EMAIL = "info@utahcommonground.org";
+
+export const DAY1_SCHEDULE = {
+  day: "Friday, Sept. 18",
+  title: "Defining the Problem & A Path to Solutions",
+  items: [
+    { time: "8:30 – 9:00", label: "Check-In & Breakfast" },
+    { time: "9:00 – 9:35", label: "Welcome & Orientation" },
+    { time: "9:35 – 10:50", label: "Introductory Presentations" },
+    { time: "10:50 – 11:00", label: "Break" },
+    { time: "11:00 – 12:00", label: "Public Engagement and Consultation: What is the Goal?" },
+    { time: "12:00 – 12:30", label: "Lunch" },
+    {
+      time: "12:35 – 2:10",
+      label: "Speed Briefings: Issues Utahns want to be able to influence",
+      note: "AI and… Education; Jobs; Natural Resources; Data Centers",
+    },
+    { time: "2:15 – 3:15", label: "Breakout #1: Education; Jobs; Natural Resources & Data Centers" },
+    { time: "3:15 – 4:45", label: "Plenary Presentations & Table Feedback #1" },
+    { time: "4:45 – 5:37", label: "Breakout Group Huddle (#2) Presentation #2 Optional" },
+    { time: "5:37 – 6:00", label: "Day One Wrap-Up" },
+    { time: "6:00 – 7:00", label: "Reception" },
+  ],
+};
+
+export const BREAKOUT_DOCS = [
+  {
+    title: "Natural Resources",
+    url: "https://docs.google.com/document/d/1nvZ4Fomq2DcWK1bOrzQaJizlbKTJR614NvcYlvZGMzo/edit?tab=t.0",
+  },
+  {
+    title: "Education",
+    url: "https://docs.google.com/document/d/1nvZ4Fomq2DcWK1bOrzQaJizlbKTJR614NvcYlvZGMzo/edit?tab=t.wu87nxv165rj",
+  },
+  {
+    title: "Jobs & Workforce",
+    url: "https://docs.google.com/document/d/1nvZ4Fomq2DcWK1bOrzQaJizlbKTJR614NvcYlvZGMzo/edit?tab=t.714gxpm70omx",
+  },
+];

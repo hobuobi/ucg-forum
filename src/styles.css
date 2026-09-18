@@ -429,6 +429,42 @@ html { overflow-x: hidden; }
 }
 .ucg-doc .ucg-doc-contact a { color: var(--orange); font-weight: 700; }
 .ucg-doc .ucg-doc-contact a:hover { color: #DD6A2C; }
+.ucg-doc .ucg-grid { margin-top: 6px; }
+.ucg-doc-wide { max-width: none; }
+
+.ucg-source-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ucg-source-row h3 { margin: 0; }
+.ucg-source-arrow { display: inline-flex; flex-shrink: 0; transform: rotate(-45deg); }
+.ucg-source-arrow svg path { stroke-width: 3.4; }
+
+.ucg-sched-day { font-weight: 700; color: var(--olive); font-size: 20px; margin: 4px 0 22px; }
+.ucg-sched { display: flex; flex-direction: column; }
+.ucg-sched-row {
+  display: grid; grid-template-columns: 190px 1fr; gap: 18px;
+  padding: 16px 0; border-top: 1px solid rgba(59, 30, 18, 0.08);
+}
+.ucg-sched-row:first-child { border-top: none; padding-top: 0; }
+.ucg-sched-time { font-weight: 700; color: var(--orange); font-size: 19px; white-space: nowrap; }
+.ucg-sched-label { font-size: 20px; line-height: 1.5; color: rgba(59, 30, 18, 0.9); }
+.ucg-sched-note { display: block; font-size: 16px; color: var(--brown-mute); margin-top: 4px; }
+@media (max-width: 620px) {
+  .ucg-sched-row { grid-template-columns: 1fr; gap: 4px; }
+  .ucg-sched-time { font-size: 17px; }
+}
+
+.ucg-tabs {
+  display: flex; justify-content: center; gap: 6px;
+  margin: 44px 0 0; border-bottom: 1px solid rgba(59, 30, 18, 0.15);
+}
+.ucg-tab {
+  background: none; border: none; cursor: pointer;
+  padding: 18px 34px; margin-bottom: -1px;
+  font-size: 20px; font-weight: 700; letter-spacing: -0.01em;
+  color: var(--brown-mute); border-bottom: 3px solid transparent;
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.ucg-tab:hover { color: var(--olive); }
+.ucg-tab.is-active { color: var(--olive); border-bottom-color: var(--orange); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
@@ -469,6 +505,7 @@ html { overflow-x: hidden; }
   .ucg-grid { grid-template-columns: repeat(2, 1fr); }
   .ucg-page { padding: 116px 20px 72px; }
   .ucg-body { max-width: none; }
+  .ucg-tab { padding: 14px 18px; font-size: 16px; }
 }
 @media (max-width: 620px) {
   .ucg-grid { grid-template-columns: 1fr; }
