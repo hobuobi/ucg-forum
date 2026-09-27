@@ -3,6 +3,7 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
 import Home from "./pages/Home.jsx";
 import LearningPage from "./pages/LearningPage.jsx";
+import NewsPage from "./pages/NewsPage.jsx";
 import DelegatesPage from "./pages/DelegatesPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import { SiteContext } from "./lib/navigation.js";
@@ -11,6 +12,7 @@ import { usePrefersReducedMotion } from "./lib/hooks.js";
 /** pathname -> NAV target, for highlighting the current nav item. */
 const CURRENT_BY_PATH = {
   "/learning": "learning",
+  "/news": "news",
   "/delegates": "delegates",
 };
 
@@ -85,6 +87,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/learning" element={<LearningPage />} />
+          <Route path="/news" element={<NewsPage />} />
           <Route path="/delegates" element={<DelegatesPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

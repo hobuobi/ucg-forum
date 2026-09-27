@@ -25,8 +25,8 @@ export default function ForumSection() {
       />
       <div className="ucg-inner">
         <h2 className="ucg-forum-lead">
-          Next, we are organizing a Two-Day Solutions Forum to develop broadly
-          supported recommendations that can ensure the public has a meaningful
+          Next, we organized a Two-Day Solutions Forum to develop broadly
+          supported recommendations that could ensure the public has a meaningful
           role in AI-related decision making.
         </h2>
 
@@ -36,7 +36,7 @@ export default function ForumSection() {
               <svg
                 viewBox="0 0 200 200"
                 role="group"
-                aria-label="Forty delegates, selected to reflect Utah, Salt Lake and Cache Counties"
+                aria-label="Forty delegates, who were selected to reflect Utah, Salt Lake and Cache Counties"
               >
                 {nodes.map((n) => (
                   <circle
@@ -89,8 +89,8 @@ export default function ForumSection() {
             <h3 className="ucg-forum-subhead">About the Solutions Forum</h3>
             <p className="ucg-forum-body">
               40 people, selected to reflect the demographics of Utah, Salt Lake and
-              Cache Counties, will convene for two full days in September to listen, talk
-              and learn, and then develop policy recommendations that can help ensure the
+              Cache Counties, convened for two full days in September to listen, talk
+              and learn, and then developed policy recommendations that can help ensure the
               public has ample opportunity to play a positive role in AI policy decisions
               affecting the state going forward.
             </p>

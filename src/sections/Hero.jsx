@@ -1,5 +1,5 @@
 import Rings from "../components/Rings.jsx";
-import { SUPPORTERS } from "../data.js";
+import { REPORT, SUPPORTERS } from "../data.js";
 import { IMAGES } from "../images.js";
 import { useSite } from "../lib/navigation.js";
 
@@ -18,13 +18,15 @@ export default function Hero() {
 
       <div className="ucg-inner">
         <div className="ucg-hero-copy">
-          <span className="ucg-pill">September 18–19, 2026</span>
           <h1 className="ucg-display">
             What role should the public have in shaping decisions related to AI?
           </h1>
           <p className="ucg-sub">
             A <span className="o">Solutions Forum,</span> hosted by Utah Common Ground
           </p>
+          <a className="ucg-hero-report" href={REPORT.file} download={REPORT.download}>
+            Read the Recommendations
+          </a>
 
           <div style={{ marginTop: 56 }}>
             <p className="ucg-eyebrow">Supported by</p>

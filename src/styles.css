@@ -179,6 +179,16 @@ html { overflow-x: hidden; }
   font-size: clamp(17px,1.5vw,23px); font-weight: 700; letter-spacing: -0.01em;
   padding: 13px 28px; border-radius: 999px; margin-bottom: 30px;
 }
+/* hero download button for the report, under the subheading */
+.ucg .ucg-hero-report {
+  display: inline-flex; align-items: center; margin-top: 30px;
+  background: var(--orange); color: #fff;
+  font-size: clamp(16px, 1.3vw, 19px); font-weight: 700; letter-spacing: -0.01em;
+  padding: 15px 30px; border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(238, 123, 60, 0.3);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+.ucg .ucg-hero-report:hover { transform: translateY(-2px); background: #DD6A2C; box-shadow: 0 16px 32px rgba(238, 123, 60, 0.38); }
 /* Cut-out photo, no panel: sized by width, vertically centred in the section,
    pushed past the right edge so it bleeds off screen. Sits behind the copy. */
 .ucg-hero-media {
@@ -436,6 +446,9 @@ html { overflow-x: hidden; }
 .ucg-source-row h3 { margin: 0; }
 .ucg-source-arrow { display: inline-flex; flex-shrink: 0; transform: rotate(-45deg); }
 .ucg-source-arrow svg path { stroke-width: 3.4; }
+/* news cards: two columns */
+.ucg-grid-2 { grid-template-columns: repeat(2, 1fr); }
+.ucg-source-news .ucg-source-row { margin-bottom: 14px; }
 
 .ucg-sched-day { font-weight: 700; color: var(--olive); font-size: 20px; margin: 4px 0 22px; }
 .ucg-sched { display: flex; flex-direction: column; }
@@ -508,7 +521,7 @@ html { overflow-x: hidden; }
   .ucg-tab { padding: 14px 18px; font-size: 16px; }
 }
 @media (max-width: 620px) {
-  .ucg-grid { grid-template-columns: 1fr; }
+  .ucg-grid, .ucg-grid-2 { grid-template-columns: 1fr; }
   .ucg-signup-cta { height: 66px; padding: 0 8px 0 28px; font-size: 17px; }
   .ucg-signup-cta-icon { width: 46px; height: 46px; }
 }

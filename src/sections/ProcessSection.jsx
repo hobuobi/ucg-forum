@@ -133,9 +133,9 @@ export default function ProcessSection() {
               AI has huge implications for <span className="o">Utah&rsquo;s future&hellip;</span>
             </h2>
             <p className="ucg-body">
-              &hellip;so we&rsquo;ve been engaging Utahns since March 2026 in dialogue related
-              to how AI is affecting people&rsquo;s lives, and how best to influence what
-              happens next.
+              &hellip;so starting in March 2026, we engaged Utahns in dialogue related to
+              how AI was affecting people&rsquo;s lives, and how best to influence what
+              happened next.
             </p>
           </div>
 

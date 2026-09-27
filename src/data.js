@@ -13,9 +13,8 @@ import { IMAGES } from "./images.js";
  *  - kind "external": an off-site link opened in a new tab. `href` is the URL.
  */
 export const NAV = [
-  { label: "The Process", kind: "anchor", target: "process" },
-  { label: "The Solutions Forum", kind: "anchor", target: "forum" },
   { label: "Learning Materials", kind: "route", target: "learning" },
+  { label: "News", kind: "route", target: "news" },
   {
     label: "More about Utah Common Ground",
     kind: "external",
@@ -50,7 +49,7 @@ export const STEPS = [
     id: "community-conversations",
     title: "Community Conversations",
     blurb:
-      "In the spring of 2026, Utah Common Ground organized nine conversations in Utah, Salt Lake and Cache Counties, both in-person and online, and invited people to join others in thinking about how people are using AI, share stories, and identify what issues are of greatest concern and which hold the greatest promise.",
+      "In the spring of 2026, Utah Common Ground organized nine conversations in Utah, Salt Lake and Cache Counties, both in-person and online, and invited people to join others in thinking about how people were using AI, share stories, and identify what issues were of greatest concern and which held the greatest promise.",
     // image coming later
   },
   {
@@ -175,6 +174,26 @@ export const RESOURCES = [
     url: "#",
   },
 ];
+
+/** Press coverage for the News page. */
+export const NEWS = [
+  {
+    title: "Utahns speak their minds on AI policy: ‘Learn from experts, not from lobbyists’",
+    source: "Deseret News",
+    url: "https://www.deseret.com/business/2026/09/23/utahns-speak-their-minds-on-ai-policy/",
+  },
+  {
+    title: "Utahns Move from Concerns to Solutions on AI and Data Centers",
+    source: "Press Release from BLOOM Project",
+    url: "https://bloom-project.org/news/",
+  },
+];
+
+/** The Solutions Forum's preliminary report, linked from the hero. */
+export const REPORT = {
+  file: "/docs/Utah%20Solutions%20Forum%20-%20Preliminary%20Report%20-%20092526.pdf",
+  download: "Utah Solutions Forum - Preliminary Report.pdf",
+};
 
 export const PORTAL_CODE = "utah2026";
 

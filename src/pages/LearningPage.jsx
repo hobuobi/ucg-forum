@@ -27,7 +27,7 @@ export default function LearningPage() {
 
         <section className="ucg-lm-section ucg-lm-section-lead">
           <p className="ucg-lm-sub ucg-lm-lead">
-            The official materials prepared for use by the Solutions Forum delegates.
+            The official materials that were prepared for use by the Solutions Forum delegates.
           </p>
           <div className="ucg-grid">
             {ACCESS_MATERIALS.map((item) => (
