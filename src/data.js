@@ -32,7 +32,6 @@ export const SUPPORTERS = [
   { name: "UTAH COMMON\nGROUND", logo: IMAGES.logos["utah-common-ground"] },
   { name: "BLOOM\nPROJECT", logo: IMAGES.logos["bloom-project"] },
   { name: "AEGIX", logo: IMAGES.logos.aegix },
-  { name: "KEM C. GARDNER\nINSTITUTE", logo: IMAGES.logos["kem-c-gardner"] },
   { name: "BRAVER\nANGELS", logo: IMAGES.logos["braver-angels"] },
   { name: "MWEG", logo: IMAGES.logos.mweg },
 ];
